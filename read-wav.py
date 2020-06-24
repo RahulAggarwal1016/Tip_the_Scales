@@ -5,9 +5,10 @@ def parse_wave(filepath):
     with wave.open(filepath, "rb") as wave_file:
         sample_rate = wave_file.getframerate()
         length_in_sec = wave_file.getnframes() / sample_rate
+        # print(wave_file.readframes(1))
 
-        first_sample = struct.unpack('<h', wave_file.readframes(1))[0]
-        second_sample = struct.unpack('<h', wave_file.readframes(1))[0]
+        first_sample = struct.unpack('<I', wave_file.readframes(1))[0]
+        second_sample = struct.unpack('<I', wave_file.readframes(1))[0]
 
         print('''
 Parsed {filename}
