@@ -121,7 +121,7 @@ model = tf.keras.models.Sequential([
     # 256 neuron hidden layer
     tf.keras.layers.Dense(256, activation='relu'),
     # Output (non-hidden) layer
-    tf.keras.layers.Dense(5, activation='sigmoid')
+    tf.keras.layers.Dense(5, activation='softmax')
 ])
 model.summary()
 
