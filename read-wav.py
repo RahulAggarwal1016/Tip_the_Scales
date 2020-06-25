@@ -121,7 +121,6 @@ create_spectrogram("wav/other/warble.wav", "image", 69)
 create_spectrogram("wav/other/whitenoise_1.wav", "image", 70)
 create_spectrogram("wav/other/whitenoise_2.wav", "image", 71)
 
-
 # example of horizontal shift image augmentation
 from numpy import expand_dims
 from keras.preprocessing.image import load_img
@@ -139,7 +138,9 @@ def create_more_images(image_file, path, use_name, letter):
     # create image data augmentation generator (increases dataset)
     train_datagen = ImageDataGenerator(
         width_shift_range=[-10, 30],
-        brightness_range=[0.7, 1.0])
+        brightness_range=[0.7, 1.0],
+        fill_mode = "constant" # should make images fill with black when translating
+    )
     # prepare iterator
     it = train_datagen.flow(samples, batch_size=1)
     # displays transformed images on pyplot
@@ -183,7 +184,7 @@ for i in range(71):
         use_name = "har-minor"
     else:
         path = "images/other/"
-        use_name = "other" + str(i) + "_"
+        use_name = "other" + str(i-47) + "_"
 
     if i == 0 or i == 12 or i == 24 or i == 36:
         letter = "a"
@@ -216,9 +217,13 @@ for i in range(71):
     elif i == 23 or i == 35 or i == 47:
         letter = "gsharp"
 
-    create_more_images(image_file, path, use_name, letter) # call function to create transformations of the image
-    # removes the file that was created earlier as it is not needed anymore
-    os.remove(image_file)
+    try:
+        create_more_images(image_file, path, use_name, letter) # call function to create transformations of the image
+        # removes the file that was created earlier as it is not needed anymore
+        os.remove(image_file)
+    except:
+        os.remove(image_file)
+        print("Didn't work " + str(i))
 
 
 print("All images are generated!")
