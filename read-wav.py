@@ -1,3 +1,5 @@
+# This file is used to create training data by transforming jpg files
+
 import librosa
 import librosa.display
 from path import Path
@@ -183,7 +185,7 @@ for i in range(71):
         path = "images/har-minor/"
         use_name = "har-minor"
     else:
-        path = "images/other/"
+        path = "other/"
         use_name = "other" + str(i-47) + "_"
 
     if i == 0 or i == 12 or i == 24 or i == 36:

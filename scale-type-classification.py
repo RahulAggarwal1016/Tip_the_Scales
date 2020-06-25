@@ -1,3 +1,5 @@
+# This file initializes and trains the model
+
 import librosa
 import librosa.display
 from path import Path
@@ -49,7 +51,7 @@ training_img_generator = ImageDataGenerator(
 train_generator = training_img_generator.flow_from_directory(
         filepath_img,  # This is the source directory for training images
         target_size=(200, 200), # resizes all the images to this size
-        batch_size=128, # will generate 128 images per batch
+        batch_size=140, # will generate 140 images per batch
         # categorical because we will be classifying the data into 5 discrete categories
         class_mode='categorical',
         shuffle=True # shuffles the dataset into a random order
@@ -107,7 +109,7 @@ model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
 hist = model.fit(
       train_generator, # the training set
       steps_per_epoch=10, # how many batches are you going to split the training set into every epoch?
-      epochs=13, # how many epochs are you going to train for?
+      epochs=12, # how many epochs are you going to train for?
       verbose=2, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
       validation_steps=8 # how many batches will you split the validation set into per epoch?
       )

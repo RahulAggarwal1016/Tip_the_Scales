@@ -1,3 +1,5 @@
+# This file takes a .wav input and predicts which class the scale falls in
+
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np

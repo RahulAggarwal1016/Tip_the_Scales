@@ -1,3 +1,6 @@
+# This file converts all images in the wav directory to jpg which are placed in the images directory
+
+
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
@@ -14,44 +17,20 @@ from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
 def create_spectrogram(filename, name, savepath, quality):
     plt.interactive(False)
     clip, sample_rate = librosa.load(filename, sr=None)
-    fig = plt.figure(figsize=[0.7, 0.7])
+    fig = plt.figure(figsize=[0.72, 0.72])
     ax = fig.add_subplot(111)
-
     ax.axes.get_xaxis().set_visible(False)
     ax.axes.get_yaxis().set_visible(False)
     ax.set_frame_on(False)
     S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
     librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
-
     filename = name + '.jpg'
-    plt.savefig(savepath + filename, dpi=quality, bbox_inches='tight', pad_inches=0)
+    plt.savefig(savepath + filename, dpi=quality, bbox_inches='tight',pad_inches=0)
     plt.close()
     fig.clf()
     plt.close(fig)
     plt.close('all')
     del filename,name,clip,sample_rate,fig,ax,S
-
-# def create_spectrogram(filename, name, savepath, img_quality):
-#     plt.interactive(False)
-#     clip, sample_rate = librosa.load(filename, sr=None)
-#     fig = plt.figure(figsize=[0.7,0.7])
-#     ax = fig.add_subplot(111)
-#
-#     ax.axes.get_xaxis().set_visible(False)
-#     ax.axes.get_yaxis().set_visible(False)
-#     ax.set_frame_on(False)
-#     S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
-#     librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
-#     fig.subplots_adjust(0,0,1,1)
-#
-#     filename = name + '.jpg'
-#     plt.savefig(savepath + filename, dpi=img_quality, bbox_inches=0,pad_inches=0)
-#     print("saved")
-#     plt.close()
-#     fig.clf()
-#     plt.close(fig)
-#     plt.close('all')
-#     del filename,name,clip,sample_rate,fig,ax,S
 
 def create_more_images(image_file, path, use_name):
     img = load_img(image_file) # loads image we want to transform
@@ -106,15 +85,15 @@ for folder in scale_folders:
         create_spectrogram(scale, img_name, img_folder, 250) # current quality is 250dpi
         # filename = "image_" + letter + "_" + use_name + "_" + str(i) + ".jpg"
 
-# # code to expand the dataset
-# for folder in scale_folders:
-#     # print("hi 1")
-#     save_path = os.path.dirname(__file__) + "/images/" + folder
-#     img_folder = filepath_img + folder + "*.jpg"
-#     for image in glob.iglob(img_folder):
-#         # print("hi 2")
-#
-#         # 1st split gets the filename of the current .jpg file, 2nd split removes the .jpg
-#         use_name = image.split("/")[-1].split(".")[0]
-#
-#         create_more_images(image, save_path, use_name)
+# code to expand the dataset
+for folder in scale_folders:
+    # print("hi 1")
+    save_path = os.path.dirname(__file__) + "/images/" + folder
+    img_folder = filepath_img + folder + "*.jpg"
+    for image in glob.iglob(img_folder):
+        # print("hi 2")
+
+        # 1st split gets the filename of the current .jpg file, 2nd split removes the .jpg
+        use_name = image.split("/")[-1].split(".")[0]
+
+        create_more_images(image, save_path, use_name)
