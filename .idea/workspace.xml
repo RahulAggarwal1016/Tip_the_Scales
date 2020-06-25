@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2476f870-cceb-4985-9083-91b65ecaa923" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scale-identification.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wav-to-image.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/C Major Scale.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scale-identification.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/read-wav.py" afterPath="$PROJECT_DIR$/read-wav.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +19,8 @@
       <file leaf-file-name="read-wav.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/read-wav.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+            <state relative-caret-position="379">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -27,21 +28,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C Major Scale.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/C Major Scale.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="wav-to-image.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wav-to-image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scale-identification.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scale-identification.py">
+      <file leaf-file-name="scratch_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,12 +73,15 @@
         <option value="$PROJECT_DIR$/generate-wav.py" />
         <option value="$PROJECT_DIR$/midi/major/read-wav-2.py" />
         <option value="$PROJECT_DIR$/read-wav-2.py" />
-        <option value="$PROJECT_DIR$/scale-identification.py" />
         <option value="$PROJECT_DIR$/read-wav.py" />
+        <option value="$PROJECT_DIR$/scale-identification.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
+        <option value="$PROJECT_DIR$/wav-to-image.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="824" />
@@ -105,13 +112,42 @@
             <path>
               <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
               <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
-              <item name="midi" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
               <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
-              <item name="midi" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="har-minor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="major" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="mel-minor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="nat-minor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="wav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="wav" type="462c0819:PsiDirectoryNode" />
+              <item name="har-minor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -122,6 +158,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -140,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.generate-wav">
+  <component name="RunManager" selected="Python.scale-identification">
     <configuration name="generate-wav" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -158,9 +195,50 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="scale-identification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="common_western_scales" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wav-to-image.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="scratch_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="common_western_scales" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Python.generate-wav" />
+      <item index="1" class="java.lang.String" itemvalue="Python.scale-identification" />
+      <item index="2" class="java.lang.String" itemvalue="Python.scratch_2" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.generate-wav" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.scale-identification" />
+        <item index="1" class="java.lang.String" itemvalue="Python.scratch_2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.generate-wav" />
       </list>
     </recent_temporary>
   </component>
@@ -168,9 +246,10 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="824" extended-state="0" />
+    <frame x="-1" y="23" width="1440" height="824" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -215,29 +294,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scale-identification.py">
+    <entry file="file://$PROJECT_DIR$/C Major Scale.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/read-wav.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+        <state relative-caret-position="379">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C Major Scale.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/wav-to-image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
