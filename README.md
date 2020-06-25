@@ -1,6 +1,6 @@
 # common_western_scales
 
-A program that will distinguish between different types of 7-note scales being played
+A program that will distinguish between different types of 7-note scales being played. Specifically, between major, minor, harmonic minor, and melodic minor, though hopefully later on we will expand this to include pentatonic scales, chromatic scales, and modes.
 
 # Contributions
 
