@@ -25,7 +25,7 @@ def create_spectrogram(filename,name,savepath,img_quality):
     fig.subplots_adjust(0,0,1,1)
 
     filename = name + '.jpg'
-    plt.savefig(savepath + filename, dpi=img_quality, bbox_inches='tight',pad_inches=0)
+    plt.savefig(savepath + filename, dpi=img_quality, bbox_inches=0,pad_inches=0)
     print("saved")
     plt.close()
     fig.clf()
@@ -38,13 +38,16 @@ filepath_img = os.path.dirname(__file__) + "/images/"
 filepath_wav = os.path.dirname(__file__) + "/wav/"
 scale_folders = ["major/", "nat-minor/", "har-minor/", "mel-minor/", "other/"]
 
-wav_folder = filepath_wav + "har-minor/" + "scale_c_har-minor.wav"
+wav_folder = os.path.dirname(__file__) + "/" + "scale-c-major.wav"
 print(wav_folder)
 print(filepath_img)
 
-create_spectrogram(wav_folder,"scale_c_har-minor-400",filepath_img,400)
-create_spectrogram(wav_folder,"scale_c_har-minor-300",filepath_img,300)
-create_spectrogram(wav_folder,"scale_c_har-minor-250",filepath_img,250)
-create_spectrogram(wav_folder,"scale_c_har-minor-200",filepath_img,200)
-create_spectrogram(wav_folder,"scale_c_har-minor-100",filepath_img,100)
-create_spectrogram(wav_folder,"scale_c_har-minor-50",filepath_img,50)
+# create_spectrogram(wav_folder,"scale_c_har-minor-400",filepath_img,400)
+# create_spectrogram(wav_folder,"scale_c_har-minor-300",filepath_img,300)
+# create_spectrogram(wav_folder,"scale_c_har-minor-250",filepath_img,250)
+# create_spectrogram(wav_folder,"scale_c_har-minor-200",filepath_img,200)
+# create_spectrogram(wav_folder,"scale_c_har-minor-100",filepath_img,100)
+# create_spectrogram(wav_folder,"scale_c_har-minor-50",filepath_img,50)
+
+create_spectrogram(wav_folder,"scale_c_major_real",filepath_img,250)
+create_spectrogram(filepath_wav + "major/scale_c_major.wav", "scale_c_major_dig", filepath_img, 250)
