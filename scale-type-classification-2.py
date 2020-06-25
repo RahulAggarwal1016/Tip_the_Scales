@@ -113,6 +113,8 @@ hist = model.fit(
       validation_steps=8 # how many batches will you split the validation set into per epoch?
       )
 
+# saves model
+model.save("model.h5")
 
 ## to create a spectrogram from any .wav file
 def create_spectrogram(filename, newname, savepath):
@@ -144,3 +146,15 @@ def create_spectrogram(filename, newname, savepath):
 
 # latest update: removed the "other" category in the hopes that it can zero in on just figuring out the difference
 ## between the 4 types of scales
+
+# predicts on the file scale_c_major_real.jpg
+from tensorflow.python.keras.preprocessing import image
+img = image.load_img('scale_c_major_real.jpg', target_size=(200, 200))
+# model.predict(np.array(img))
+img = np.expand_dims(img, axis=0)
+
+images = np.vstack([img])
+classes = model.predict_classes(images, batch_size=10)
+print(classes)
+
+print(train_generator.class_indices)
