@@ -27,8 +27,6 @@ from numpy import expand_dims
 from tensorflow.python.keras.preprocessing.image import load_img
 from tensorflow.python.keras.preprocessing.image import img_to_array
 
-from tensorflow.python.keras.utils import to_categorical
-
 #######################################################################################
 
 # some filepath variables
@@ -83,6 +81,7 @@ train_generator = training_img_generator.flow_from_directory(
 
 #######################################################################################
 # # code to help us visualize what a flow_from_directory object looks like
+
 # print(train_generator.classes) # an array of numbers from 0 - 4, representing the 5 classes
 # print(len(train_generator)) # 1 - idk
 # print(len(train_generator[0])) # 2 - labels [1] and training data [0]
@@ -129,11 +128,11 @@ model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
               optimizer='adam',
               metrics=['acc'])
 
-hist = model.fit_generator(
+hist = model.fit(
       train_generator, # the training set
       steps_per_epoch=8, # how many batches are you going to split the training set into every epoch?
       epochs=10, # how many epochs are you going to train for?
       verbose=1, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
         # no validation set for now
-      validation_steps=8 # how many batches will you split the validation set into per epoch?
+      # validation_steps=8 # how many batches will you split the validation set into per epoch?
       )
