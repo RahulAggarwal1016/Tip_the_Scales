@@ -3,11 +3,11 @@ import librosa.display
 from path import Path
 
 import tensorflow as tf
-from keras import layers
-from keras import models
-from keras.preprocessing.image import ImageDataGenerator
-from keras.layers.advanced_activations import LeakyReLU
-from keras.optimizers import Adam
+from tensorflow.python.keras import layers
+from tensorflow.python.keras import models
+from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
+from tensorflow.python.keras.optimizers import Adam
 
 import pylab
 import matplotlib.pyplot as plt
@@ -42,8 +42,6 @@ scale_labels = ["major", "natural minor", "harmonic minor", "melodic minor", "ot
 
 # Image data generator for the NN - incorporated Dhruv's version from read-wav.py now with minor changes
 training_img_generator = ImageDataGenerator(
-    rescale=1./255,
-    width_shift_range=[-10, 30],
     brightness_range=[0.7, 1.3]
 )
 
@@ -59,7 +57,7 @@ train_generator = training_img_generator.flow_from_directory(
 
 #######################################################################################
 # # code to help us visualize what a flow_from_directory object looks like
-print(train_generator.classes) # an array of numbers from 0 - 4, representing the 5 classes
+# print(train_generator.classes) # an array of numbers from 0 - 4, representing the 5 classes
 # print(len(train_generator)) # 1 - idk
 # print(len(train_generator[0])) # 2 - labels [1] and training data [0]
 #
@@ -97,7 +95,7 @@ model = tf.keras.models.Sequential([
     # 256 neuron hidden layer
     tf.keras.layers.Dense(256, activation='relu'),
     # Output (non-hidden) layer
-    tf.keras.layers.Dense(5, activation='softmax')
+    tf.keras.layers.Dense(4, activation='softmax')
 ])
 
 model.summary()
@@ -108,38 +106,11 @@ model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
 
 hist = model.fit(
       train_generator, # the training set
-      steps_per_epoch=8, # how many batches are you going to split the training set into every epoch?
-      epochs=10, # how many epochs are you going to train for?
-      verbose=1, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
-        # no validation set for now
+      steps_per_epoch=10, # how many batches are you going to split the training set into every epoch?
+      epochs=13, # how many epochs are you going to train for?
+      verbose=2, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
       validation_steps=8 # how many batches will you split the validation set into per epoch?
       )
 
 
-## to create a spectrogram from any .wav file
-def create_spectrogram(filename, newname, savepath):
-    plt.interactive(False)
-    clip, sample_rate = librosa.load(filename, sr=None)
-    fig = plt.figure(figsize=[0.72,0.72])
-    ax = fig.add_subplot(111)
-    ax.axes.get_xaxis().set_visible(False)
-    ax.axes.get_yaxis().set_visible(False)
-    ax.set_frame_on(False)
-    S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
-    librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
-    newname = newname + '.jpg'
-    plt.savefig(savepath + newname, dpi=400, bbox_inches='tight',pad_inches=0)
-    plt.close()
-    fig.clf()
-    plt.close(fig)
-    plt.close('all')
-    del filename, newname, clip, sample_rate, fig, ax, S
-
-try:
-    create_spectrogram('wav/major/scale_bflat_major.wav', 'image', 'midi/')
-    print("Image Created")
-except:
-    print("Image not created")
-
-# removes the image.jpg file that was created earlier
-os.remove("midi/image.jpg")
+model.save("model.h5")
