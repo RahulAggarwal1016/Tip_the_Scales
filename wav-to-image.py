@@ -27,7 +27,7 @@ def create_spectrogram(filename,name,savepath):
 
 filepath_img = os.path.dirname(__file__) + "/images/"
 filepath_wav = os.path.dirname(__file__) + "/wav/"
-scale_folders = ["major/", "nat-minor/", "har-minor/", "mel-minor/"]
+scale_folders = ["major/", "nat-minor/", "har-minor/", "mel-minor/", "other/"]
 
 # time to generate the graphs
 for folder in scale_folders:

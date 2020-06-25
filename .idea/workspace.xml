@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2476f870-cceb-4985-9083-91b65ecaa923" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/scale-classification.py" afterPath="$PROJECT_DIR$/scale-type-classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scale-type-classification.py" afterPath="$PROJECT_DIR$/scale-type-classification.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wav-to-image.py" afterPath="$PROJECT_DIR$/wav-to-image.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +15,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="read-wav.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/read-wav.py">
+      <file leaf-file-name="wav-to-image.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wav-to-image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="24" column="47" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="24" selection-end-column="47" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -29,20 +30,8 @@
       <file leaf-file-name="scale-type-classification.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scale-type-classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wav-to-image.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wav-to-image.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="672">
+              <caret line="86" column="48" lean-forward="true" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -73,11 +62,11 @@
         <option value="$PROJECT_DIR$/generate-wav.py" />
         <option value="$PROJECT_DIR$/midi/major/read-wav-2.py" />
         <option value="$PROJECT_DIR$/read-wav-2.py" />
-        <option value="$PROJECT_DIR$/read-wav.py" />
         <option value="$PROJECT_DIR$/scale-identification.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_2.py" />
-        <option value="$PROJECT_DIR$/wav-to-image.py" />
         <option value="$PROJECT_DIR$/scale-classification.py" />
+        <option value="$PROJECT_DIR$/read-wav.py" />
+        <option value="$PROJECT_DIR$/wav-to-image.py" />
         <option value="$PROJECT_DIR$/scale-type-classification.py" />
       </list>
     </option>
@@ -115,6 +104,12 @@
               <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
               <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
@@ -234,8 +229,8 @@
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.scale-type-classification" />
         <item index="1" class="java.lang.String" itemvalue="Python.scale-identification" />
-        <item index="2" class="java.lang.String" itemvalue="Python.scratch_2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.generate-wav" />
+        <item index="2" class="java.lang.String" itemvalue="Python.generate-wav" />
+        <item index="3" class="java.lang.String" itemvalue="Python.scratch_2" />
       </list>
     </recent_temporary>
   </component>
@@ -278,7 +273,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -346,18 +341,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/read-wav.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="348">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/whitenoise_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/whitenoise_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/warble.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/sweep_med.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/sweep_low.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/sweep_high.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/singletone_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/dualtone_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/random_melody_1_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/random_melody_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/d_chromatic_fast.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/g_chromatic_slow.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/a_minor_pentatonic.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/c_dorian_mode.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/c_minor_chords.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/gflat_locrian_mode.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/random_chords.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/other/random_chords_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wav-to-image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="360">
+          <caret line="24" column="47" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="24" selection-end-column="47" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -366,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scale-type-classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="672">
+          <caret line="86" column="48" lean-forward="true" selection-start-line="86" selection-start-column="48" selection-end-line="86" selection-end-column="48" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
