@@ -24,7 +24,6 @@ import numpy as np
 
 # example of vertical shift image augmentation
 from numpy import expand_dims
-from tensorflow.python.keras.preprocessing.image import load_img
 from tensorflow.python.keras.preprocessing.image import img_to_array
 
 #######################################################################################
@@ -54,7 +53,7 @@ def create_spectrogram(filename, newname, savepath):
     S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
     librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
     newname = newname + '.jpg'
-    plt.savefig(savepath + newname, dpi=400, bbox_inches='tight',pad_inches=0)
+    plt.savefig(savepath + newname, dpi=250, bbox_inches='tight',pad_inches=0)
     plt.close()
     fig.clf()
     plt.close(fig)
