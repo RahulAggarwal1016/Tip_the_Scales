@@ -2,18 +2,16 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Tip The Scales</title>
+        <title>Tip: The Scales</title>
         <link rel="stylesheet" type="text/css" href="css/tip-the-scales-css.css">
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     </head>
 
     <body>
 
-            
-
 
         <div class="grey-rectangle">
-            <h1 id="title" class="body-text">Tip The Scales</h1>
+            <h1 id="title" class="body-text">Tip: The Scales</h1>
 
             <div class="img-container">
                 <img id="title-separation" src="img/music-notes.png">
@@ -21,11 +19,16 @@
 
             <p class="body-text"></p>
             <p class="body-text">The four most common types of scales used in western music are: </p>
-            <p class="body-text" style="font-size: 1.7em; ">Major, Natural Minor, Harmonic Minor, and Melodic Minor.</p>
-            <p class="body-text">Can't tell the difference between these scales? No worries! - this audio classification program is trained to do it for you. It is able to distinguish between these four different types of common scales being played.</p>
+            <p class="body-text" style="font-size: 1.7em; ">
+                <a class="body-text" href="https://en.wikipedia.org/wiki/Major_scale">Major</a>,
+                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Natural_minor_scale">Natural Minor</a>,
+                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Harmonic_minor_scale">Harmonic Minor</a>, and
+                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Melodic_minor_scale">Melodic Minor</a>.
+            </p>
+            <p class="body-text">Can't tell the difference between them? No worries! This audio classification program is trained to do it for you. Tip: The Scales is able to distinguish between these four different types of common scales being played.</p>
             
             <h2 id="subtitle" class="body-text">Step 1. Upload your .wav file</h2>
-            <p class="body-text" style="text-align: left;">The program will use your .wav file and determine which scale it is playing.</p>
+            <p class="body-text" style="text-align: left;">The program will use your .wav file and determine which scale (if any) is recorded in the file.</p>
             <div class="img-container" id="placeholder-img-container">
                 <img id="placeholder-img" src="img/jquery-file-upload-placeholder.png">
             </div>
@@ -33,8 +36,10 @@
                 <button class="body-text" id="upload-button">UPLOAD</button>
             </div>
 
-            <h2 id="subtitle" class="body-text">Step 2. Output</h2>
-            <p class="body-text" style="text-align: left;"></p>
+            <h2 id="subtitle" class="body-text">Step 2. Output!</h2>
+            <h3 id="subtitle" style="font-size: 1.5em; color: #535343;" class="body-text">Your Scale Is:</h3>
+            <p class="body-text" style="text-align: left;">[This text will change once your scale has been identified.]</p>
+            <p class="body-text" style="text-align: left;">[^ Something like: "name.wav" contains a Major Scale.]</p>
 
 
         </div>

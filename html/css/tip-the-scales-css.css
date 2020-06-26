@@ -45,8 +45,10 @@ body {
     background-color: rgb(255, 240, 220);
     padding: 5%;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
     width: 80%;
+    padding-bottom: 5em;
 }
 
 .btn-container {
