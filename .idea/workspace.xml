@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2476f870-cceb-4985-9083-91b65ecaa923" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tip-the-scales-css.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tip-the-scales.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scale-type-classification.py" afterPath="$PROJECT_DIR$/scale-type-classification.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +19,8 @@
       <file leaf-file-name="scale-type-classification-2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scale-type-classification-2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+            <state relative-caret-position="139">
+              <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
               <folding>
                 <element signature="e#46#60#0" expanded="true" />
               </folding>
@@ -28,8 +31,8 @@
       <file leaf-file-name="scale-type-classification.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scale-type-classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="107" column="56" lean-forward="false" selection-start-line="107" selection-start-column="56" selection-end-line="107" selection-end-column="56" />
+            <state relative-caret-position="352">
+              <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding>
                 <element signature="e#46#60#0" expanded="true" />
               </folding>
@@ -40,9 +43,11 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-              <folding />
+            <state relative-caret-position="-241">
+              <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="71" />
+              <folding>
+                <element signature="e#76#129#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,9 +81,9 @@
         <option value="$PROJECT_DIR$/read-wav.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$PROJECT_DIR$/wav-to-image.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/scale-type-classification-2.py" />
         <option value="$PROJECT_DIR$/scale-type-classification.py" />
-        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
@@ -121,6 +126,11 @@
               <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
               <item name="images-original" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="common_western_scales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="common_western_scales" type="462c0819:PsiDirectoryNode" />
+              <item name="val-images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -154,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.scale-type-classification">
     <configuration name="scale-identification" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -249,8 +259,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.scale-type-classification" />
+        <item index="0" class="java.lang.String" itemvalue="Python.scale-type-classification" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test" />
         <item index="2" class="java.lang.String" itemvalue="Python.scale-type-classification-2" />
         <item index="3" class="java.lang.String" itemvalue="Python.scale-identification" />
         <item index="4" class="java.lang.String" itemvalue="Python.scratch_3" />
@@ -534,28 +544,30 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scale-type-classification-2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        <state relative-caret-position="139">
+          <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
           <folding>
             <element signature="e#46#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="71" />
+          <folding>
+            <element signature="e#76#129#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scale-type-classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="107" column="56" lean-forward="false" selection-start-line="107" selection-start-column="56" selection-end-line="107" selection-end-column="56" />
+        <state relative-caret-position="352">
+          <caret line="130" column="0" lean-forward="true" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding>
             <element signature="e#46#60#0" expanded="true" />
           </folding>

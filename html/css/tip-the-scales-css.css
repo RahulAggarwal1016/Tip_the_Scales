@@ -1,0 +1,16 @@
+body {
+    background-image: url("../img/sheet-music.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#title {
+    text-align: center;
+}
+
+.grey-rectangle {
+    background-color: lightgrey;
+    padding: 5%;
+    margin: auto;
+    margin-top: 2em;
+    width: 80%;
+}
