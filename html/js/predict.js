@@ -1,8 +1,17 @@
-import * as tf from '@tensorflow/tfjs';
+var url = "https://teachablemachine.withgoogle.com/models/un_XbaxjZ/";
 
-const model = await tf.loadLayersModel('http://localhost:5500/html/tip-the-scales.html'); //loads model through the server that this is hosted on
 
-if(model) {
-    console.log("It works!");
-}
+$.ajax({
+    type:"POST",
+    url: "~/convert_to_jpg.py",
+    data: {}
+}).done(function(o) {
+    console.log('YAY!');
+})
+
+
+
+model = await tmImage.load(url + "model.json"), url + "metadata.json");
+
+maxPredictions = model.getTotalClasses();
 

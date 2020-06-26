@@ -22,7 +22,13 @@ body {
 }
 
 .img-container {
-    margin:auto;
+    margin: auto;
+    width: 85%;
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+#placeholder-img-container {
     width: 80%;
 }
 
@@ -41,6 +47,27 @@ body {
     margin: auto;
     margin-top: 2em;
     width: 80%;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+#upload-button {
+    text-align: center;
+    border: none;
+    height: 40px;
+    background-color: #6eac65;
+    color: white;
+    font-size: 1.2em;
+}
+#upload-button:hover {
+    background-color: #4c8a43;
+}
+
+#title-separation {
+    width: 90%;
+    height: auto;
 }
 
 p {
