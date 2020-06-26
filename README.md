@@ -10,7 +10,7 @@ There are two ways to use this program:
 
 ## Using our Web Application
 
-
+**hewwo**
 
 ## Using a Pythin IDE
 
@@ -43,3 +43,45 @@ This project was made between June 24-26, 2020 for the University of Waterloo So
 - Carol Xu
 - Dhruv Rawat
 - Rahul Aggarwal
+
+# Hackathon Formalities ;)
+
+## Inspiration
+
+When we were begining our instructions in music, we found it difficult to distinguish between major, harmonic minor, melodic minor, and natrual minor scales. Often to resolve these issues, we would ask our music teachers or older friends to identify the scales for us. Now, as more experienced musicians, we are developing **Tip the Scales** to reduce the time children spend identifying scales.
+
+## What it does
+
+Tip the scales is very simple to use. Users input a WAV audio file of a scale and the website will identify it as major, harmonic minor, melodic minor, and natrual minor.
+
+## How we built it
+
+We first created a dataset for all of the scale types by making 12 .mid audio files using MuseScore. Afterwards, we then converted all of the files to WAV audio. Using Python, we used the librosa and matplotlib modules to read the WAV audio files and create .jpg spectrograms for each of the wave files (after this step, we had 12 .jpg for each scale type). Afterwards, we used the keras.processing.image module to transform the images and create more .jpgs. Using an algorithm we made, we expanded our dataset to over 228 images per scale type.
+
+Then, to apply the machine learning to each of the two environments, we did this:
+
+### Web application
+
+We used React JavaScript to create the web application. To create a json model for tensorflow, we used [Teachable Machine](https://teachablemachine.withgoogle.com). We then linked tensorflowjs to the React app. Since the website takes WAV audio files as an input, we used ajax to call a python function in convert-to-jpg.py to create a .jpg sepctrogram that the json model can use.
+
+### Python IDE
+
+Using TensorFlow Python, we generated a model in create-model.py. We used the sounddevice and write modules to record audio from the user, and keras.models and numpy to use the model in predict-with-recording.py.
+
+## Challenges we ran into
+
+Using TensorFlow to process audio files was extremely difficult. It took us a while to understand how to use iamge recognition to do predictions on audio files (by making spectrograms!!!). Additionally, creating the algorithm to transform the images and create more .jpgs was challenging as the transformations would distort the images. However, after some investigation, the issue was resolved and the quality of the images (which are in the images directory) are good. Moreover, running a server and accessing python functions using React js was a challenge which we resolved through perseverance and dedication (and lots of coffee).
+
+## Accomplishments we are proud of
+
+We are proud that we have gotten audio processing and image recognition with tensorflowjs and tensorflowpython to work. All of this would not have been possible had it not been for our amazing teamwork!
+
+## What we learned
+
+Through this project, we hae learned a lot about machine learning, TensorFlow, and audio processing.
+
+## What is next for Tip the Scales
+
+- Bringing Tip the Scales to iOS and Android.
+- Adding more scale types to the machine learning model: Scale modes (ex. Major Locrian)
+- Allowing the program to identify the key of the scale (ex. E Major)

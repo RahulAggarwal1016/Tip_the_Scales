@@ -6,11 +6,11 @@ import librosa
 import librosa.display
 from path import Path
 
-from tensorflow.python.keras import layers
-from tensorflow.python.keras import models
-from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
-from tensorflow.python.keras.optimizers import Adam
-# import tensorflow.python.keras.backend as K
+from keras import layers
+from keras import models
+from keras.layers.advanced_activations import LeakyReLU
+from keras.optimizers import Adam
+
 import pylab
 import matplotlib.pyplot as plt
 from matplotlib import figure
