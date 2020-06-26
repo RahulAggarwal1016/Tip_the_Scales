@@ -2,8 +2,8 @@
 
 # This file is NEEDED for the operation of this program
 
-from tensorflow.python.keras.models import load_model
-from tensorflow.python.keras.preprocessing import image
+from keras.models import load_model
+from keras.preprocessing import image
 import numpy as np
 
 import librosa
@@ -11,11 +11,11 @@ import librosa.display
 from path import Path
 
 import tensorflow as tf
-from tensorflow.python.keras import layers
-from tensorflow.python.keras import models
-from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
-from tensorflow.python.keras.optimizers import Adam
+from keras import layers
+from keras import models
+from keras.preprocessing.image import ImageDataGenerator
+from keras.layers.advanced_activations import LeakyReLU
+from keras.optimizers import Adam
 
 import pylab
 import matplotlib.pyplot as plt
@@ -28,8 +28,8 @@ import pandas as pd
 import glob
 
 from numpy import expand_dims
-from tensorflow.python.keras.preprocessing.image import load_img
-from tensorflow.python.keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
 
 
 ## to create a spectrogram from any .wav file
