@@ -2,7 +2,7 @@ var url = "https://teachablemachine.withgoogle.com/models/un_XbaxjZ/";
 
 
 
-$(async function() {
+(async () => {
     model = await tmImage.load(url + "model.json", url + "metadata.json")
     console.log("Model is loaded")
 
@@ -11,7 +11,7 @@ $(async function() {
 
     $('#test-button').click(async function() {
         var prediction = await model.predict(document.getElementById("selected-image"));
-        
+        console.log(prediction);
     })
 });
 
