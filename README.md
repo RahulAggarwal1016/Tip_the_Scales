@@ -1,4 +1,4 @@
-# common_western_scales
+# Tip_the_Scales
 
 A program that will distinguish between different types of 7-note scales being played. Specifically, between major, minor, harmonic minor, and melodic minor, though hopefully later on we will expand this to include pentatonic scales, chromatic scales, and modes.
 
@@ -17,7 +17,7 @@ There are two ways to use this program:
 1. Download this repository on your computer.
 2. Make sure you have [Python3](https://www.python.org/downloads/) installed on your computer
 3. Open the project folder in a Python IDE. We recommend using [Pycharm CE](https://www.jetbrains.com/pycharm/download/#section=mac) by Jet Brains which can be downloaded for free.
-4. Set up your Python3 interpreter and make sure the following modules are installed. Before installing these modules on your IDE, you have to download them on your computer using   "pip3 install ____" (the underlines represent the module names:
+4. Set up your Python3 interpreter and make sure the following modules are installed. Before installing these modules on your IDE, you have to download them on your computer using   "pip3 install --" (the dash represents the module names):
     - tensorflow
     - keras
     - librosa
@@ -52,11 +52,11 @@ This project was made between June 24-26, 2020 for the University of Waterloo So
 
 When we were begining our instructions in music, we found it difficult to distinguish between major, harmonic minor, melodic minor, and natrual minor scales. Often to resolve these issues, we would ask our music teachers or older friends to identify the scales for us. Now, as more experienced musicians, we are developing **Tip the Scales** to reduce the time children spend identifying scales.
 
-## What it does
+## What Tip the Scales does
 
 Tip the scales is very simple to use. Users input a WAV audio file of a scale and the website will identify it as major, harmonic minor, melodic minor, and natrual minor.
 
-## How we built it
+## How we built Tip the Scales
 
 We first created a dataset for all of the scale types by making 12 .mid audio files using MuseScore. Afterwards, we then converted all of the files to WAV audio. Using Python, we used the librosa and matplotlib modules in *"wav-to-image.py"* to read the WAV audio files and create .jpg spectrograms for each of the wave files (after this step, we had 12 .jpg for each scale type). Afterwards, we used the keras.processing.image module to transform the images and create more .jpgs. Using the algorithm we made in *"create-training-data.py"*, we expanded our dataset to over 228 images per scale type.
 
