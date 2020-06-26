@@ -1,15 +1,18 @@
 # This file initializes and trains the model
 
+# This file is not needed for the operation of this program, only the setup
+
+
 import librosa
 import librosa.display
 from path import Path
 
 import tensorflow as tf
-from tensorflow.python.keras import layers
-from tensorflow.python.keras import models
-from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.python.keras.layers.advanced_activations import LeakyReLU
-from tensorflow.python.keras.optimizers import Adam
+from keras import layers
+from keras import models
+from keras.preprocessing.image import ImageDataGenerator
+from keras.layers.advanced_activations import LeakyReLU
+from keras.optimizers import Adam
 
 import pylab
 import matplotlib.pyplot as plt
@@ -23,16 +26,16 @@ import glob
 import numpy as np
 
 from numpy import expand_dims
-from tensorflow.python.keras.preprocessing.image import load_img
-from tensorflow.python.keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
 
 #######################################################################################
 
 # some filepath variables
-filepath_img = os.path.dirname(__file__) + "/images/"
+filepath_train = os.path.dirname(__file__) + "/images/"
 filepath_valid = os.path.dirname(__file__) + "/val-images/"
 
-filepath_wav = os.path.dirname(__file__) + "/wav/"
+# filepath_wav = os.path.dirname(__file__) + "/wav/"
 scale_folders = ["major/", "nat-minor/", "har-minor/", "mel-minor/", "other/"]
 
 # some other important variables
@@ -41,8 +44,6 @@ scale_labels = ["major", "natural minor", "harmonic minor", "melodic minor", "ot
 
 #######################################################################################
 
-
-# some handy functions
 
 # Image data generator for the NN - incorporated Dhruv's version from read-wav.py now with minor changes
 training_img_generator = ImageDataGenerator(
@@ -55,21 +56,23 @@ valid_img_generator = ImageDataGenerator(
 
 # this code uses the image data generator declared above on all the x values (training images)
 train_generator = training_img_generator.flow_from_directory(
-    filepath_img,  # This is the source directory for training images
+    filepath_train,  # This is the source directory for training images
     target_size=(200, 200), # resizes all the images to this size
-    batch_size=150, # will generate 150 images per batch
+    batch_size=140, # will generate 140 images per batch
     # categorical because we will be classifying the data into 5 discrete categories
     class_mode='categorical',
     shuffle=True # shuffles the dataset into a random order
 )
 
+# this code uses the image data generator declared above on all the x values (validation/testing images)
 valid_generator = valid_img_generator.flow_from_directory(
-    filepath_valid,
-    target_size=(200, 200),
-    batch_size=32,
+    filepath_valid, # This is the source directory for validation images
+    target_size=(200, 200), # resizes all the images to this size
+    batch_size=32, # will generate 32 images per batch
     class_mode='categorical',
-    shuffle=True
+    shuffle=True # shuffles the dataset into a random order
 )
+
 
 #######################################################################################
 # # code to help us visualize what a flow_from_directory object looks like
@@ -103,7 +106,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.MaxPooling2D(2, 2),
 
     tf.keras.layers.Conv2D(16, (3, 3), activation='relu'),
-    # tf.keras.layers.MaxPooling2D(2, 2),
+    tf.keras.layers.MaxPooling2D(2, 2),
 
     # Flatten the results to feed into a DNN
     tf.keras.layers.Flatten(), # Reduces the dimensions to feed into the layer
@@ -116,21 +119,18 @@ model = tf.keras.models.Sequential([
 
 model.summary()
 
-model.compile(
-    loss=tf.keras.losses.CategoricalCrossentropy(),
-    optimizer='adam',
-    metrics=['acc']
-)
+model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
+              optimizer='adam',
+              metrics=['acc'])
 
 hist = model.fit(
-    train_generator, # the training set
-    steps_per_epoch=8, # how many batches are you going to split the training set into every epoch?
-    epochs=10, # how many epochs are you going to train for?
-    verbose=1, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
-    validation_steps=8, # how many batches will you split the validation set into per epoch?
-    validation_data = valid_generator, # at the end of each epoch, NN will test on the validation set
-)
-
+      train_generator, # the training set
+      steps_per_epoch=10, # how many batches are you going to split the training set into every epoch?
+      epochs=12, # how many epochs are you going to train for?
+      verbose=1, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
+      validation_steps=8, # how many batches will you split the validation set into per epoch?
+      validation_data = valid_generator, # at the end of each epoch, NN will test on the validation set
+      )
 
 
 model.save("model.h5")

@@ -1,5 +1,7 @@
 # This file is used to create training data by transforming jpg files
 
+# This file is not needed for the operation of this program, only the setup
+
 import librosa
 import librosa.display
 from path import Path
