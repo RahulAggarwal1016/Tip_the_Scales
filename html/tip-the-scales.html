@@ -4,23 +4,36 @@
         <meta charset="UTF-8">
         <title>Tip The Scales</title>
         <link rel="stylesheet" type="text/css" href="css/tip-the-scales-css.css">
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     </head>
 
     <body>
-        <script src="js/predict.js"></script>
+        <script>
+            
+            console.log("here") 
+            var url = "http://localhost:5500/html/model/model.json" 
+
+            const model =  tf.loadLayersModel(url); //loads model through the server that this is hosted on
+            
+            var prediction = model.predict("/images/har-minor/image_a_har-minor_1.jpg")
+            console.log(prediction);
+
+        </script>
+
+            
+
 
         <div class="grey-rectangle">
             <h1 id="title" class="body-text">Tip The Scales</h1>
-            <p class="body-text">This program is able to distinguish between different types of common western 7-note scales being played.</p>
+            <p class="body-text"></p>
             <p class="body-text">The four most common types of scales used in western music are: </p>
-            <ul>
-                <li>Major</li>
-                <li>Natural Minor</li>
-                <li>Harmonic Minor</li>
-                <li>Melodic Minor</li>
-            </ul>
-            <p>Don't worry if you can't tell the difference between these scales - this program will do it for you!</p>
+            <p class="body-text" style="font-size: 1.7em; ">Major, Natural Minor, Harmonic Minor, and Melodic Minor.</p>
+            <p class="body-text">Can't tell the difference between these scales? No worries! - this audio classification program is trained to do it for you. It is able to distinguish between these four different types of common scales being played.</p>
+            
+            <h2 id="subtitle" class="body-text">Step 1. Upload a .wav file</h2>
+            <div class="img-container">
+                <img id="placeholder-img" src="img/jquery-file-upload-placeholder.png">
+            </div>
         </div>
 
 

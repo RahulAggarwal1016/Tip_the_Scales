@@ -73,6 +73,7 @@ valid_generator = valid_img_generator.flow_from_directory(
     shuffle=True # shuffles the dataset into a random order
 )
 
+# print(train_generator.class_indices)
 
 #######################################################################################
 # # code to help us visualize what a flow_from_directory object looks like

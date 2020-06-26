@@ -4,13 +4,45 @@ body {
     background-size: cover;
 }
 #title {
+    margin: auto;
     text-align: center;
+    width: 60%;
+    font-size: 3.5em;
+}
+
+#subtitle {
+    text-align: left;
+    font-size: 2em;
+    color: #333323;
+}
+
+#placeholder-img {
+    width: 80%;
+    height: auto;
+}
+
+.img-container {
+    margin:auto;
+    width: 80%;
+}
+
+.body-text {
+    margin: auto;
+    margin-top: 1.5em;
+    text-align: center;
+    width: 80%;
+    color: #535343;
 }
 
 .grey-rectangle {
-    background-color: lightgrey;
+    border-radius: 5px;
+    background-color: rgb(255, 240, 220);
     padding: 5%;
     margin: auto;
     margin-top: 2em;
     width: 80%;
+}
+
+p {
+    font-size: 1.5em;
 }
