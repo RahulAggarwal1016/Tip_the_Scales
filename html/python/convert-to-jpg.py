@@ -1,4 +1,13 @@
 
+#################################################################################
+#
+# How the code works:
+#   - create_spectrogram() function takes a WAV audio file and creates a
+#     spectrogram .jpg file
+#
+#################################################################################
+
+
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
@@ -39,7 +48,7 @@ def create_spectrogram(filename, newname, savepath):
     ax.set_frame_on(False)
     S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
     librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
-    newname = newname + '.jpg'                                                  
+    newname = newname + '.jpg'
     plt.savefig(savepath + newname, dpi=250, bbox_inches='tight',pad_inches=0)
     plt.close()
     fig.clf()
@@ -47,4 +56,4 @@ def create_spectrogram(filename, newname, savepath):
     plt.close('all')
     del filename, newname, clip, sample_rate, fig, ax, S
 
-create_spectrogram('html/audio_input.wav', 'image', 'html/img/')  # CHANGE PATH NAME OF AUDIO FILE
+create_spectrogram('html/audio_input.wav', 'image', 'html/img/')

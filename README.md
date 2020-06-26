@@ -72,7 +72,7 @@ Using TensorFlow Python, we generated a model in *"create-model.py"*. We used th
 
 ## Challenges we ran into
 
-Using TensorFlow to process audio files was extremely difficult. It took us a while to understand how to use image recognition to do predictions on audio files (by making spectrograms!!!). Additionally, creating the algorithm to transform the images and create more .jpgs was challenging as the transformations would distort the images. However, after some investigation, the issue was resolved and the quality of the images (which are in the images directory) are good. Moreover, running a server and accessing python functions using React js was a challenge which we resolved through perseverance and dedication (and lots of coffee).
+Using TensorFlow to process audio files was extremely difficult. It took us a while to understand how to use image recognition to do predictions on audio files (by making spectrograms!!!). Additionally, creating the algorithm to transform the images and create more .jpgs was challenging as the transformations would distort the images. However, after some investigation, the issue was resolved and the quality of the images (which are in the images directory) are good. Moreover, running a server and accessing python functions using React JS was a challenge which we resolved through perseverance and dedication (and lots of coffee).
 
 ## Accomplishments we are proud of
 

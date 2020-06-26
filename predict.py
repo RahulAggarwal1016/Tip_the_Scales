@@ -1,6 +1,15 @@
-# This file takes a .wav input and predicts which class the scale falls in
+# Not a part of the final product. This was used for debugging purposes
 
-# This file is NEEDED for the operation of this program
+#################################################################################
+#
+# How the code works:
+#   - User writes the path to their WAV audio file on line 61 and
+#     create_spectrogram() function makes a .jpg image that is saved to project
+#     directory.
+#   - Program uses ML model to predict scale type.
+#
+#################################################################################
+
 
 from keras.models import load_model
 from keras.preprocessing import image
@@ -43,7 +52,7 @@ def create_spectrogram(filename, newname, savepath):
     ax.set_frame_on(False)
     S = librosa.feature.melspectrogram(y=clip, sr=sample_rate)
     librosa.display.specshow(librosa.power_to_db(S, ref=np.max))
-    newname = newname + '.jpg'                                                  # Rahul, if you want to upload the image to a specific area, write the path here
+    newname = newname + '.jpg'
     plt.savefig(savepath + newname, dpi=250, bbox_inches='tight',pad_inches=0)
     plt.close()
     fig.clf()
@@ -52,7 +61,7 @@ def create_spectrogram(filename, newname, savepath):
     del filename, newname, clip, sample_rate, fig, ax, S
 
 # .wav file converted to jpg spectrogram
-wav_path = 'wav/mel-minor/scale_f_mel-minor.wav'                                # Rahul, this should be where the wave file path is listed
+wav_path = 'wav/mel-minor/scale_f_mel-minor.wav'                                # Write the path to your WAV audio file here
 create_spectrogram(wav_path, 'image', '')
 
 
@@ -63,7 +72,7 @@ model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
                   metrics=['acc'])
 
 
-image_path = "image.jpg"                                                        # Rahul, write the path for the image you created in the create_spectrogram() function
+image_path = "image.jpg"
 
 current_img = image.load_img(image_path, target_size=(200, 200))
 x = image.img_to_array(current_img)

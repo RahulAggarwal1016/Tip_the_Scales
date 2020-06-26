@@ -1,6 +1,11 @@
-# This file initializes and trains the model
+# Not a part of the final product. This was used for training purposes
 
-# This file is not needed for the operation of this program, only the setup
+#################################################################################
+#
+# This .py file creates the model that is used in "predict-with-recording.py"
+# and "predict.py." We used TensorFlow Python to make it.
+#
+#################################################################################
 
 
 import librosa
@@ -37,7 +42,6 @@ import tensorflowjs as tfjs
 filepath_train = os.path.dirname(__file__) + "/images/"
 filepath_valid = os.path.dirname(__file__) + "/val-images/"
 
-# filepath_wav = os.path.dirname(__file__) + "/wav/"
 scale_folders = ["major/", "nat-minor/", "har-minor/", "mel-minor/", "other/"]
 
 # some other important variables
@@ -119,11 +123,11 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(5, activation='softmax')
 ])
 
-model.summary()
+model.summary() # outputs a brief summary of the model in the console
 
 model.compile(loss=tf.keras.losses.CategoricalCrossentropy(),
               optimizer='adam',
-              metrics=['acc'])
+              metrics=['acc']) # Compiles the model
 
 hist = model.fit(
       train_generator, # the training set
@@ -135,4 +139,4 @@ hist = model.fit(
       )
 
 
-model.save("model.h5")
+model.save("model.h5") # saves the model in the project directory (the model is already present)

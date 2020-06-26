@@ -1,6 +1,13 @@
-# This file converts all images in the wav directory to jpg which are placed in the images directory
+# Not a part of the final product. This was used for training purposes
 
-# This file is not needed for the operation of this program, only the setup
+#################################################################################
+#
+# How the code works:
+#   - Code works similarly to create-training-data.py but uses a different
+#     approach.
+#
+#################################################################################
+
 
 import librosa
 import librosa.display

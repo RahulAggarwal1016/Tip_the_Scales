@@ -1,6 +1,8 @@
+# This is part of the final product!!
+
 #################################################################################
 #
-# How the code runs:
+# How the code works:
 #   - The file will record an audio clip (using your microphone) for a duration
 #     that you specify
 #   - The code will convert your audio file to a .jpg and then use model.h5 to
@@ -35,7 +37,7 @@ valid_input = False
 while not(valid_input):
     try:
         duration = int(input("How long (seconds) would you like your audio recording to be? (The maximum value you can input is \"20\")\n"))
-        if duration > 15:
+        if duration > 20:
             print("Your input must be between 1 and 20 inclusive.")
         else:
             valid_input = True

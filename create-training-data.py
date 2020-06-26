@@ -1,6 +1,18 @@
-# This file is used to create training data by transforming jpg files
+# Not a part of the final product. This was used for training purposes
 
-# This file is not needed for the operation of this program, only the setup
+#################################################################################
+#
+# This .py file was used to create training data from 71 WAV audio files.
+#
+# How the code works:
+#   - Using the create_spectrogram() function, a spectrogram .jpg file was
+#     created for each WAV audio file and saved in the project directory.
+#   - The for loop goes through all of the .jpg files that were created earlier
+#     and calls the create_more_images() for each image.
+#   - The create_more_images() method applies image transformations to the .jpg
+#     files and creates 20 more images that are stored in the images directory.
+#
+#################################################################################
 
 import librosa
 import librosa.display
@@ -22,6 +34,13 @@ import pandas as pd
 from glob import glob
 import numpy as np
 
+# used for image transformations
+from numpy import expand_dims
+from keras.preprocessing.image import load_img
+from keras.preprocessing.image import img_to_array
+from keras.preprocessing.image import ImageDataGenerator
+from matplotlib import pyplot
+
 
 def create_spectrogram(filename, name, image_num):
     plt.interactive(False)
@@ -42,7 +61,7 @@ def create_spectrogram(filename, name, image_num):
     plt.close('all')
     del filename, name, clip, sample_rate, fig, ax, S
 
-## takes wave files and creates spectrogram images
+## takes wave files and creates spectrogram .jpg images
 # Major scales
 create_spectrogram("wav/major/scale_a_major.wav", "image", 0)
 create_spectrogram("wav/major/scale_aflat_major.wav", "image", 1)
@@ -124,13 +143,6 @@ create_spectrogram("wav/other/sweep_low.wav", "image", 68)
 create_spectrogram("wav/other/warble.wav", "image", 69)
 create_spectrogram("wav/other/whitenoise_1.wav", "image", 70)
 create_spectrogram("wav/other/whitenoise_2.wav", "image", 71)
-
-# example of horizontal shift image augmentation
-from numpy import expand_dims
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing.image import ImageDataGenerator
-from matplotlib import pyplot
 
 
 def create_more_images(image_file, path, use_name, letter):
@@ -225,7 +237,7 @@ for i in range(71):
         create_more_images(image_file, path, use_name, letter) # call function to create transformations of the image
         # removes the file that was created earlier as it is not needed anymore
         os.remove(image_file)
-    except:
+    except: # if the function could not be called
         os.remove(image_file)
         print("Didn't work " + str(i))
 
