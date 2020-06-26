@@ -10,43 +10,43 @@
         <!-- <button id="test-button">HELLLOOO</button>
         <img id="selected-image" src="img/test-image.jpg"></img> -->
 
-        <div class="grey-rectangle">
+        <div className="grey-rectangle">
             <!--First section - title and a fancy line break -->
-            <h1 id="title" class="body-text">Tip: The Scales</h1>
+            <h1 id="title" className="body-text">Tip: The Scales</h1>
 
-            <div class="img-container">
-                <img id="title-separation" src="img/music-notes.png">
+            <div className="img-container">
+                <img id="title-separation" src="img/music-notes.png"></img>
             </div>
 
             <!--Second section - description of the program -->
-            <p class="body-text"></p>
-            <p class="body-text">The four most common types of scales used in western music are: </p>
-            <p class="body-text" style="font-size: 1.7em; ">
-                <a class="body-text" href="https://en.wikipedia.org/wiki/Major_scale">Major</a>,
-                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Natural_minor_scale">Natural Minor</a>,
-                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Harmonic_minor_scale">Harmonic Minor</a>, and
-                <a class="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Melodic_minor_scale">Melodic Minor</a>.
+            <p className="body-text"></p>
+            <p className="body-text">The four most common types of scales used in western music are: </p>
+            <p className="body-text" style="font-size: 1.7em; ">
+                <a className="body-text" href="https://en.wikipedia.org/wiki/Major_scale">Major</a>,
+                <a className="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Natural_minor_scale">Natural Minor</a>,
+                <a className="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Harmonic_minor_scale">Harmonic Minor</a>, and
+                <a className="body-text" href="https://en.wikipedia.org/wiki/Minor_scale#Melodic_minor_scale">Melodic Minor</a>.
             </p>
-            <p class="body-text">Can't tell the difference between them? No worries! This audio classification program is trained to do it for you. Tip: The Scales is able to distinguish between these four different types of common scales being played.</p>
+            <p className="body-text">Can't tell the difference between them? No worries! This audio classification program is trained to do it for you. Tip: The Scales is able to distinguish between these four different types of common scales being played.</p>
 
             <!--Third section - uploading file -->
-            <h2 id="subtitle" class="body-text">Step 1. Upload your .wav file</h2>
-            <p class="body-text" style="text-align: left;">The program will use your .wav file and determine which scale (if any) is recorded in the file.</p>
-            <div class="img-container" id="placeholder-img-container">
-                <img id="placeholder-img" src="img/jquery-file-upload-placeholder.png">
+            <h2 id="subtitle" className="body-text">Step 1. Upload your .wav file</h2>
+            <p className="body-text" style="text-align: left;">The program will use your .wav file and determine which scale (if any) is recorded in the file.</p>
+            <div className="img-container" id="placeholder-img-container">
+                <img id="placeholder-img" src="img/jquery-file-upload-placeholder.png"></img>
             </div>
-            <div class="btn-container">
-                <button class="btn" id="upload-button" onclick="showLoad()">UPLOAD</button>
+            <div className="btn-container">
+                <button className="btn" id="upload-button" onclick="showLoad()">UPLOAD</button>
             </div>
 
             <!--Fourth section - output -->
-            <h2 id="subtitle" class="body-text">Step 2. Output!</h2>
-            <h3 id="subtitle" style="font-size: 1.5em; color: #535343;" class="body-text">Your Scale Is:</h3>
-            <p class="body-text" id="result-text" style="text-align: left;">
+            <h2 id="subtitle" className="body-text">Step 2. Output!</h2>
+            <h3 id="subtitle" style="font-size: 1.5em; color: #535343;" className="body-text">Your Scale Is:</h3>
+            <p className="body-text" id="result-text" style="text-align: left;">
                 <div id="loader"></div>
             </p>
-            <div class="btn-container">
-                <button class="btn" id="spectrogram-button" onclick="showHideSpectrogram()">SHOW SCALE SPECTROGRAM</button>
+            <div className="btn-container">
+                <button className="btn" id="spectrogram-button" onclick="showHideSpectrogram()">SHOW SCALE SPECTROGRAM</button>
             </div>
 
             <!-- Holds inputted image -->
