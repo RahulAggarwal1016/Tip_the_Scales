@@ -17,7 +17,7 @@ There are two ways to use this program:
 1. Download this repository on your computer.
 2. Make sure you have [Python3](https://www.python.org/downloads/) installed on your computer
 3. Open the project folder in a Python IDE. We recommend using [Pycharm CE](https://www.jetbrains.com/pycharm/download/#section=mac) by Jet Brains which can be downloaded for free.
-4. Set up your Python3 interpreter and install the following modules. Before installing these modules on your IDE, you have to download them on your computer using   "pip3 install ____" (the underlines represent the module names:
+4. Set up your Python3 interpreter and make sure the following modules are installed. Before installing these modules on your IDE, you have to download them on your computer using   "pip3 install ____" (the underlines represent the module names:
     - tensorflow
     - keras
     - librosa
