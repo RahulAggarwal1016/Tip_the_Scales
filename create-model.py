@@ -29,6 +29,8 @@ from numpy import expand_dims
 from keras.preprocessing.image import load_img
 from keras.preprocessing.image import img_to_array
 
+import tensorflowjs as tfjs
+
 #######################################################################################
 
 # some filepath variables
@@ -73,7 +75,6 @@ valid_generator = valid_img_generator.flow_from_directory(
     shuffle=True # shuffles the dataset into a random order
 )
 
-# print(train_generator.class_indices)
 
 #######################################################################################
 # # code to help us visualize what a flow_from_directory object looks like
@@ -128,7 +129,7 @@ hist = model.fit(
       train_generator, # the training set
       steps_per_epoch=10, # how many batches are you going to split the training set into every epoch?
       epochs=12, # how many epochs are you going to train for?
-      verbose=1, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
+      verbose=2, # verbose=0 means don't print out the epochs at all, 1 and 2 mean print out the epochs as you go through them
       validation_steps=8, # how many batches will you split the validation set into per epoch?
       validation_data = valid_generator, # at the end of each epoch, NN will test on the validation set
       )
