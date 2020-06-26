@@ -72,7 +72,7 @@ Using TensorFlow Python, we generated a model in *"create-model.py"*. We used th
 
 ## Challenges we ran into
 
-Using TensorFlow to process audio files was extremely difficult. It took us a while to understand how to use iamge recognition to do predictions on audio files (by making spectrograms!!!). Additionally, creating the algorithm to transform the images and create more .jpgs was challenging as the transformations would distort the images. However, after some investigation, the issue was resolved and the quality of the images (which are in the images directory) are good. Moreover, running a server and accessing python functions using React js was a challenge which we resolved through perseverance and dedication (and lots of coffee).
+Using TensorFlow to process audio files was extremely difficult. It took us a while to understand how to use image recognition to do predictions on audio files (by making spectrograms!!!). Additionally, creating the algorithm to transform the images and create more .jpgs was challenging as the transformations would distort the images. However, after some investigation, the issue was resolved and the quality of the images (which are in the images directory) are good. Moreover, running a server and accessing python functions using React js was a challenge which we resolved through perseverance and dedication (and lots of coffee).
 
 ## Accomplishments we are proud of
 
@@ -87,3 +87,4 @@ Through this project, we hae learned a lot about machine learning, TensorFlow, a
 - Bringing Tip the Scales to iOS and Android.
 - Adding more scale types to the machine learning model: Scale modes (ex. Major Locrian)
 - Allowing the program to identify the key of the scale (ex. E Major)
+- Adding more training data recordings of scales played on a variety of instruments to improve the accuracy of predictions on real-life data.
