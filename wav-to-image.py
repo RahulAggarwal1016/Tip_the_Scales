@@ -1,5 +1,6 @@
 # This file converts all images in the wav directory to jpg which are placed in the images directory
 
+# This file is not needed for the operation of this program, only the setup
 
 import librosa
 import librosa.display
