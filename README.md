@@ -1,6 +1,6 @@
 # Tip_the_Scales
 
-A program that will distinguish between different types of 7-note scales being played. Specifically, between major, minor, harmonic minor, and melodic minor, though hopefully later on we will expand this to include pentatonic scales, chromatic scales, and modes.
+A program that will distinguish between different types of 7-note scales being played. Specifically, between major, minor, harmonic minor, and melodic minor, though hopefully later on we will expand this to include pentatonic scales, chromatic scales, and modes. Project Video Showcase: https://drive.google.com/file/d/1MOTlCR_ls6QrBtZ51fNTsIBfjktUNLqg/view?usp=sharing
 
 # Deployment Instructions
 
