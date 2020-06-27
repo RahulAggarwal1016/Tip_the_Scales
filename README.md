@@ -49,8 +49,6 @@ There are two ways to use this program:
 
 5. You are all set to upload *.wav* files via the React Web App
 
-**Instructions to be added**
-
 # Contributions
 
 This project was made between June 24-26, 2020 for the University of Waterloo Software Engineering Class of 2025 Hackathon.
