@@ -35,19 +35,19 @@ There are two ways to use this program:
 
 1. Visit and download the shared google drive folder which contains the main code files: https://drive.google.com/drive/folders/188JoSUJ3QWbDEkIrcoPA-hbEh5tMYMI0?usp=sharing  
 
-2. Open the master folder (common_western_scales) in the editor of your choice and cd to the scales directory: /Users/user-name/common_western_scales/scales
+2. Open the master folder (common_western_scales) in the code editor of your choice and cd to the *scales* directory: /Users/user-name/common_western_scales/scales
 
-3. Once inside the scales directory, make sure to install the following dependencies/libraries which can be done by running npm i module_name (search online to find the exact terminal command) if installed
+3. Once inside the scales directory, make sure to install the following dependencies/libraries which can be done by running "npm i module_name" into the terminal if installed (search online to find the exact terminal command)
     - node.js
     - react
     - axios
     - Additionally: Python 3.7
 
 4. Open up two terminal inside of your code editor to run the following two commands (ensure you are still inside the scales directory):
-    1. "npm start" --> Runs the React Web Application on a default browser  
-    2. "npx nodemon server.js" --> Runs the node.js server
+    1. *"npm start"* --> Runs the React Web Application on a default browser  
+    2. *"npx nodemon server.js"* --> Runs the node.js server
 
-5. You are all set to upload .wav files via the React Web App
+5. You are all set to upload *.wav* files via the React Web App
 
 **Instructions to be added**
 
