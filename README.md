@@ -5,12 +5,8 @@ A program that will distinguish between different types of 7-note scales being p
 # Deployment Instructions
 
 There are two ways to use this program:
-1. Through our web application
-2. Through a Python IDE
-
-## Using our Web Application
-
-**hewwo**
+1. Through a Python IDE
+2. Through our web application
 
 ## Using a Python IDE
 
@@ -34,6 +30,10 @@ There are two ways to use this program:
 **Disclaimers and Notes:**
 - Python IDE Step 4: These are the modules we had to download when making this project. We noticed that the modules we had to download differed between teammates, so you may need to download additional ones.
 - Python IDE Step 4: To install the modules in Pyharm CE, go to **Preferences->Project: common_western_scales->Project Interpreter**, and then **click the "+" sign** at the bottom left of the preferences window
+
+## Using our Web Application
+
+**Instructions to be added**
 
 # Contributions
 
